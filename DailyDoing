@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Daily Plan</title>
+  <style>
+    /* Add your CSS styling here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: #333;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Daily Plan</h1>
+  <ul>
+    <li>Brush</li>
+    <li>Fruits, bread etc breakfast</li>
+    <li>Cold bath</li>
+    <li>Coffee face mask</li>
+    <li>Dance</li>
+    <li>Music</li>
+    <li>Call Niki</li>
+    <li>Take some photo with Nanima</li>
+    <li>Eat lunch</li>
+    <li>Relax</li>
+    <li>Write some Korean diary and learn words</li>
+    <li>Do Duolingo</li>
+    <li>Write holiday homework French</li>
+    <li>Have afternoon snack and milk</li>
+    <li>Relax</li>
+    <li>Music</li>
+    <li>Dinner</li>
+    <li>Sleep</li>
+  </ul>
+</body>
+</html>
