@@ -1,43 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>My Daily Plan</title>
-  <style>
-    /* Add your CSS styling here */
-    body {
-      font-family: Arial, sans-serif;
-    }
-    h1 {
-      color: #333;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 20px;
-    }
-  </style>
-</head>
-<body>
-  <h1>My Daily Plan</h1>
-  <ul>
-    <li>Brush</li>
-    <li>Fruits, bread etc breakfast</li>
-    <li>Cold bath</li>
-    <li>Coffee face mask</li>
-    <li>Dance</li>
-    <li>Music</li>
-    <li>Call Niki</li>
-    <li>Take some photo with Nanima</li>
-    <li>Eat lunch</li>
-    <li>Relax</li>
-    <li>Write some Korean diary and learn words</li>
-    <li>Do Duolingo</li>
-    <li>Write holiday homework French</li>
-    <li>Have afternoon snack and milk</li>
-    <li>Relax</li>
-    <li>Music</li>
-    <li>Dinner</li>
-    <li>Sleep</li>
-  </ul>
-</body>
-</html>
+  <head>
+    <title>My Daily Plan</title>
+    <style>
+      /* Add your CSS styling here */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: #333;
+      }
+      ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+      input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 2px solid #999;
+        border-radius: 4px;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      input[type="checkbox"]:checked::before {
+        content: '\2714';
+        font-size: 16px;
+        color: #fff;
+        text-align: center;
+        line-height: 16px;
+        background-color: #555;
+        border-radius: 4px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+      li.completed label {
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Daily Plan</h1>
+    <ul>
+      <li><input type="checkbox" id="task1"><label for="task1">Brush</label></li>
+      <li><input type="checkbox" id="task2"><label for="task2">Fruits, bread etc breakfast</label></li>
+      <li><input type="checkbox" id="task3"><label for="task3">Cold bath</label></li>
+      <li><input type="checkbox" id="task4"><label for="task4">Coffee face mask</label></li>
+      <li><input type="checkbox" id="task5"><label for="task5">Dance</label></li>
+      <li><input type="checkbox" id="task6"><label for="task6">Music</label></li>
+      <li><input type="checkbox" id="task7"><label for="task7">Call Niki</label></li>
+      <li><input type="checkbox" id="task8"><label for="task8">Take some photo with Nanima</label></li>
+      <li><input type="checkbox" id="task9"><label for="task9">Eat lunch</label></li>
+      <li><input type="checkbox" id="task10"><label for="task10">Relax</label></li>
+      <li><input type="checkbox" id="task11"><label for="task11">Write some Korean diary and learn words</label></li>
+      <li><input type="checkbox" id="task12"><label for="task12">Do Duolingo</label></li>
+      <li><input type="checkbox" id="task13"><label for="task13">Write holiday homework French</label></li>
+      <li><input type="checkbox" id="task14"><label for="task14">Have afternoon snack and milk</label></li>
+      <li><input type="checkbox" id="task15"><label for="task15">Relax</label></li>
+      <li><input type="checkbox" id="task16"><label for="task16">Music</label></li>
+      <li><input type="checkbox" id="task17"><label for="task17">Dinner</label></li>
+      <li><input type="checkbox" id="task18"><label for="task18">Sleep</label></li>
+    </ul>
+    <script>
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
+      checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('click', function() {
+          const label = checkbox.nextElementSibling;
+          if (checkbox.checked) {
+            label.parentNode.classList.add('completed');
+          } else {
+            label.parentNode.classList.remove('completed');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
